@@ -13,6 +13,12 @@ public class CustomerTest {
     }
 
     @Test
+    public void canPay(){
+        customer.pay(1000);
+        assertThat(customer.getWallet()).isEqualTo(9000);
+    }
+
+    @Test
     public void canGetName(){
         assertThat(customer.getName()).isEqualTo("Tom");
     }

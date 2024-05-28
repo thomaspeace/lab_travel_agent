@@ -1,5 +1,5 @@
-public class BedAndBreakfast implements Bookable{
-
-
-
-}
+//public class BedAndBreakfast implements Bookable{
+//
+//
+//
+//}

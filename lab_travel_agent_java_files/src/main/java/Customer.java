@@ -10,6 +10,17 @@ public class Customer {
         this.wallet = wallet;
     }
 
+    public void pay(int amount){
+        this.wallet -= amount;
+    }
+
+    public boolean canAfford(int price){
+        if (price <= this.wallet){
+            return true;
+        }
+        return false;
+    }
+
 //    getters and setters
 
     public void setName(String newName){
