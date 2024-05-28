@@ -41,8 +41,6 @@ public class BedAndBreakfast implements Bookable{
 //        refunding the customer using a negative number in the pay method
         customer.pay(-this.getPrice());
     }
-
-
 }
 
 

@@ -4,8 +4,4 @@ public interface Bookable {
     void cancel(Customer customer);
     int getPrice();
     boolean hasCapacity();
-
-
-
-
 }
