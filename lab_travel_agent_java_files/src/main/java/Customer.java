@@ -11,7 +11,9 @@ public class Customer {
     }
 
     public void pay(int amount){
-        this.wallet -= amount;
+        if (this.canAfford(amount)) {
+            this.wallet -= amount;
+        }
     }
 
     public boolean canAfford(int price){

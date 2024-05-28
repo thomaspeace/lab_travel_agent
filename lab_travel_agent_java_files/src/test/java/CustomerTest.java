@@ -13,11 +13,27 @@ public class CustomerTest {
     }
 
     @Test
-    public void canPay(){
+    public void canPay__enough_money(){
         customer.pay(1000);
         assertThat(customer.getWallet()).isEqualTo(9000);
     }
 
+    @Test
+    public void canPay__not_enough_money(){
+        customer.pay(100000);
+        assertThat(customer.getWallet()).isEqualTo(10000);
+    }
+
+    @Test
+    public void canAfford__true(){
+        assertThat(customer.canAfford(1000)).isEqualTo(true);
+    }
+
+    @Test
+    public void canAfford__false(){
+        assertThat(customer.canAfford(100000)).isEqualTo(false);
+    }
+    
     @Test
     public void canGetName(){
         assertThat(customer.getName()).isEqualTo("Tom");
